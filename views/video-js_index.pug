@@ -1,0 +1,9 @@
+html
+  head
+    link(rel="stylesheet", href="https://vjs.zencdn.net/8.0.4/video-js.css")
+  body
+    video(id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}")
+      source(src= torrentLink, type='video/mp4')
+      each track in track_list
+        track(kind="captions" label=track['lang'] srclang=track['langcode'] src='/subtitles?subUrl='+track['url'])
+    script(src='https://vjs.zencdn.net/8.0.4/video.min.js')

@@ -1,0 +1,13 @@
+html
+  head
+    link(rel="stylesheet", href="https://cdn.plyr.io/3.7.3/plyr.css")
+    style
+      include max-size.css
+  body
+    video
+      source(src= torrentLink, type='video/mp4')
+      each track in track_list
+        track(kind="captions" label=track['lang'] srclang=track['langcode'] src='/subtitles?subUrl='+track['url'])
+    script(src='https://cdn.plyr.io/3.7.3/plyr.js')
+    script
+      include plyrjs.js

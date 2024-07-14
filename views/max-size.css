@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+.plyr {
+    height: 100%;
+    width :100%;
+    }
+.plyr__menu__container {
+    max-height: 250px;
+    overflow-y: scroll;
+    border-radius: var(--plyr-menu-radius,4px);
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: var(--plyr-menu-radius,4px);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: var(--plyr-menu-radius,4px);
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+                                       color-stop(0, rgb(200,215,245)),
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.95, rgb(28,58,148)));
+}
+:root {
+	--plyr-font-size-base: 20px;
+	--plyr-font-size-small: 22px;
+	--plyr-font-size-large: 24px;
+	--plyr-font-size-xlarge: 32px;
+  }
